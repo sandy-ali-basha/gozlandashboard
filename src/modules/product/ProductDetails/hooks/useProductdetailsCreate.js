@@ -16,6 +16,10 @@ const schema = yup.object().shape({
     title: yup.string().required("English title is required"),
     description: yup.string().required("English description is required"),
   }),
+  tr: yup.object().shape({
+    title: yup.string().required("Turkish title is required"),
+    description: yup.string().required("Turkish description is required"),
+  }),
 });
 
 export const useProductdetailsCreate = ({ id }) => {
@@ -103,6 +107,7 @@ export const useProductdetailsCreate = ({ id }) => {
   const languages = [
     { code: "ar", name: "Arabic" },
     { code: "en", name: "English" },
+    { code: "tr", name: "Turkish" },
   ];
   const Discription = [
     {
@@ -123,6 +128,15 @@ export const useProductdetailsCreate = ({ id }) => {
       register: "en.description",
       error: "en.description",
       helperText: "en.description",
+    },
+    {
+      head: t("Turkish description"),
+      type: "text",
+      placeholder: t("tr.description"),
+      name: "tr.description",
+      register: "tr.description",
+      error: "tr.description",
+      helperText: "tr.description",
     },
   ];
   const details = languages.map((lang, index) => ({

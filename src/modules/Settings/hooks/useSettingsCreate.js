@@ -10,7 +10,7 @@ import { _Settings } from "api/settings/settings";
 
 const schema = yup.object().shape({
   name: yup.string().required("required"),
-  
+
 });
 
 export const useSettingsCreate = () => {
@@ -54,7 +54,7 @@ export const useSettingsCreate = () => {
 
   const languages = [
   { code: "ar", name: "Arabic" },
-    { code: "kr", name: "Kurdish" },
+    { code: "kr", name: "Turkish" },
     { code: "en", name: "English" },
   ];
 

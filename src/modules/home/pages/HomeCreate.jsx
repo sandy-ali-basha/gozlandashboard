@@ -54,6 +54,18 @@ const HomeCreate = ({ open, setOpen, type, id }) => {
       placeholder: t("description arabic"),
       register: "description_ar",
     },
+    {
+      head: t("title turkish"),
+      type: "text",
+      placeholder: t("title turkish"),
+      register: "title_tr",
+    },
+    {
+      head: t("description turkish"),
+      type: "text",
+      placeholder: t("description turkish"),
+      register: "description_tr",
+    },
   ];
 
   const handleClose = () => {
@@ -90,6 +102,8 @@ const HomeCreate = ({ open, setOpen, type, id }) => {
     formData.append("description", input.description);
     formData.append("title_ar", input.title_ar);
     formData.append("description_ar", input.description_ar);
+    formData.append("title_tr", input.title_ar);
+    formData.append("description_tr", input.description_ar);
     mutate(formData);
     setLoading(true);
   };
@@ -135,7 +149,7 @@ const HomeCreate = ({ open, setOpen, type, id }) => {
               alignItems: "center",
             }}
           >
-            <Typography variant="body1" color="initial" sx={{ mt: 2 }}>
+            <Typography variant="body1"   sx={{ mt: 2 }}>
               replace current image
             </Typography>
             <Image

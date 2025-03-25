@@ -121,7 +121,7 @@ const CreateProductDetails = ({ setNewProductId }) => {
               </Grid>
               <Divider
                 orientation="vertical"
-                sx={{ background: "white", color: "text.primary" }}
+                sx={{ background: "white", color: "text.main" }}
               >
                 OR
               </Divider>

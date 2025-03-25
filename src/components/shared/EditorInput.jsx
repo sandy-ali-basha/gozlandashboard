@@ -73,9 +73,9 @@ const EditorInput = ({ control, register, name, setValue, errors, initialValue }
           padding: "10px",
           margin: "10px",
           width: "100%",
-          color: "text.primary",
+          color: "text.main",
           border: "1px solid",
-          borderColor: errors ? "error.main" : "text.primary",
+          borderColor: errors ? "error.main" : "text.main",
           borderRadius: "5px",
         }}
       >

@@ -50,7 +50,7 @@ const TermsCreate = () => {
       <BoxStyled sx={{ px: "24px" }}>
         <Grid container component="form">
           <Grid item md={12} sx={{ p: "10px" }}>
-            <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" color="text.secondary">
+            <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" >
               name arabic
             </Typography>
             <TextFieldStyled
@@ -65,7 +65,7 @@ const TermsCreate = () => {
           </Grid>
           <Grid item xs={12} sx={{ p: "10px" }}>
             <Box sx={{ margin: "0 0 8px 5px" }}>
-              <Typography variant="body1" color="text.secondary" sx={{ color: "text.main" }}>
+              <Typography variant="body1"  sx={{ color: "text.main" }}>
                 {t("text arabic")}
               </Typography>
             </Box>
@@ -77,36 +77,36 @@ const TermsCreate = () => {
               errors={errors?.ar?.text?.message}
             />
           </Grid>
-          {/* <Grid item md={12} sx={{ p: "10px" }}>
-            <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" color="text.secondary">
-              Name Kurdish
+          <Grid item md={12} sx={{ p: "10px" }}>
+            <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" >
+              Name Turkish
             </Typography>
             <TextFieldStyled
               sx={{ width: "100%" }}
               type={"text"}
               placeholder="name"
               defaultValue=""
-              {...register(`kr.name`)}
-              error={!!errors.kr?.name}
-              helperText={errors.kr?.name?.message || ""}
+              {...register(`tr.name`)}
+              error={!!errors.tr?.name}
+              helperText={errors.tr?.name?.message || ""}
             />
-          </Grid> */}
-          {/* <Grid item xs={12} sx={{ p: "10px" }}>
+          </Grid>
+          <Grid item xs={12} sx={{ p: "10px" }}>
             <Box sx={{ margin: "0 0 8px 5px" }}>
-              <Typography variant="body1" color="text.secondary" sx={{ color: "text.main" }}>
-                {t("text kurdish")}
+              <Typography variant="body1"  sx={{ color: "text.main" }}>
+                {t("text Turkish")}
               </Typography>
             </Box>
             <EditorInput
               control={control}
               register={register}
-              name={"kr.text"}
+              name={"tr.text"}
               setValue={setValue}
-              errors={errors?.kr?.text?.message}
+              errors={errors?.tr?.text?.message}
             />
-          </Grid> */}
+          </Grid>
           <Grid item md={12} sx={{ p: "10px" }}>
-            <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" color="text.secondary">
+            <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" >
               Name English
             </Typography>
             <TextFieldStyled
@@ -121,7 +121,7 @@ const TermsCreate = () => {
           </Grid>
           <Grid item xs={12} sx={{ p: "10px" }}>
             <Box sx={{ margin: "0 0 8px 5px" }}>
-              <Typography variant="body1" color="text.secondary" sx={{ color: "text.main" }}>
+              <Typography variant="body1"  sx={{ color: "text.main" }}>
                 {t("text English")}
               </Typography>
             </Box>

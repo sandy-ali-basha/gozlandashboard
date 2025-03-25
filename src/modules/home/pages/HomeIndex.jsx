@@ -78,7 +78,7 @@ const HomeIndex = () => {
           ml: { xs: "0px" },
         }}
       >
-        <Typography sx={{ my: 2 }} variant="body1" color="initial">
+        <Typography sx={{ my: 2 }} variant="body1" >
           Navbar
         </Typography>
         <BoxStyled
@@ -94,7 +94,7 @@ const HomeIndex = () => {
             </Card>
           ))}
         </BoxStyled>
-        <Typography sx={{ my: 2 }} variant="body1" color="initial">
+        <Typography sx={{ my: 2 }} variant="body1" >
           Slider
         </Typography>
         <BoxStyled sx={{ px: "10px" }}>
@@ -139,7 +139,7 @@ const HomeIndex = () => {
               </Box>
             ))}
         </BoxStyled>
-        <Typography sx={{ my: 2 }} variant="body1" color="initial">
+        <Typography sx={{ my: 2 }} variant="body1" >
           collections
         </Typography>
         <BoxStyled sx={{ px: "10px" }}>
@@ -156,7 +156,7 @@ const HomeIndex = () => {
                       alt={item.title}
                     />
                     <CardContent>
-                      <Typography variant="h6" color="initial">
+                      <Typography variant="h6" >
                         {item.title}
                       </Typography>
                       <Button
@@ -180,7 +180,7 @@ const HomeIndex = () => {
               </Grid>
             ))}
         </BoxStyled>
-        <Typography sx={{ my: 2 }} variant="body1" color="initial">
+        <Typography sx={{ my: 2 }} variant="body1" >
           categories
         </Typography>
         <BoxStyled sx={{ px: "10px" }}>
@@ -220,7 +220,7 @@ const HomeIndex = () => {
               </Grid>
             ))}
         </BoxStyled>
-        <Typography sx={{ my: 2 }} variant="body1" color="initial">
+        <Typography sx={{ my: 2 }} variant="body1" >
           Two Items
         </Typography>
         <BoxStyled sx={{ px: "10px" }}>
@@ -257,7 +257,7 @@ const HomeIndex = () => {
               </Grid>
             ))}
         </BoxStyled>
-        <Typography sx={{ my: 2 }} variant="body1" color="initial">
+        <Typography sx={{ my: 2 }} variant="body1" >
           Banner
         </Typography>
         <BoxStyled sx={{ px: "10px" }}>
@@ -274,10 +274,10 @@ const HomeIndex = () => {
                       alt={item.title}
                     />
                     <CardContent>
-                      <Typography variant="h6" color="initial">
+                      <Typography variant="h6" >
                         {item.title}
                       </Typography>
-                      <Typography variant="body2" color="initial">
+                      <Typography variant="body2" >
                         {item.description}
                       </Typography>
                       <Button

@@ -54,6 +54,13 @@ const NavUpdate = ({ id, setId }) => {
       register: "text_ar",
       defaultValue: data?.text_ar,
     },
+    {
+      head: t("text turkish"),
+      type: "text_tr",
+      placeholder: t("text turkish"),
+      register: "text_tr",
+      defaultValue: data?.text_tr,
+    },
   ];
 
   const handleClose = () => {

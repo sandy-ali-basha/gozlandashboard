@@ -18,10 +18,10 @@ let schema = yup.object().shape({
   qty: yup.number().required("qty is required"),
 
   sku: yup.string().trim().required("sku is required"),
-  // kr: yup.object().shape({
-  //   name: yup.string().required("Kurdish name name is required"),
-  //   description: yup.string().required("Kurdish description is required"),
-  // }),
+  tr: yup.object().shape({
+    name: yup.string().required("Turkish name name is required"),
+    description: yup.string().required("Turkish description is required"),
+  }),
   ar: yup.object().shape({
     name: yup.string().required("Arabic name name is required"),
     description: yup.string().required("Arabic description is required"),
@@ -108,6 +108,15 @@ export const useProductCreate = ({ setNewProductId }) => {
       error: "en.name",
       helperText: "en.name",
     },
+    {
+      head: t("Turkish name"),
+      type: "text",
+      placeholder: t("tr.name"),
+      name: "tr name",
+      register: "tr.name",
+      error: "tr.name",
+      helperText: "tr.name",
+    },
   ];
 
   const generalDetails = [
@@ -166,6 +175,15 @@ export const useProductCreate = ({ setNewProductId }) => {
       register: "en.description",
       error: "en.description",
       helperText: "en.description",
+    },
+    {
+      head: t("Turkish description"),
+      type: "text",
+      placeholder: t("tr.description"),
+      name: "tr.description",
+      register: "tr.description",
+      error: "tr.description",
+      helperText: "tr.description",
     },
   ];
 

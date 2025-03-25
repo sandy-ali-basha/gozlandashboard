@@ -18,9 +18,9 @@ import ButtonLoader from "components/shared/ButtonLoader";
 import EditorInput from "components/shared/EditorInput";
 import { useParams } from "react-router-dom";
 const schema = yup.object().shape({
-  kr: yup.object().shape({
-    title: yup.string().required("Kurdish title is required"),
-    description: yup.string().required("Kurdish description is required"),
+  tr: yup.object().shape({
+    title: yup.string().required("Turkish title is required"),
+    description: yup.string().required("Turkish description is required"),
   }),
   ar: yup.object().shape({
     title: yup.string().required("Arabic title is required"),
@@ -54,8 +54,8 @@ const ProductdetailsUpdate = ({ id }) => {
       setData(fetchedData);
       if (fetchedData) {
         setValue(
-          "kr.title",
-          fetchedData?.translations.find((t) => t.locale === "kr")?.title || ""
+          "tr.title",
+          fetchedData?.translations.find((t) => t.locale === "tr")?.title || ""
         );
         setValue(
           "ar.title",
@@ -67,8 +67,8 @@ const ProductdetailsUpdate = ({ id }) => {
         );
 
         setValue(
-          "kr.description",
-          fetchedData?.translations.find((t) => t.locale === "kr")
+          "tr.description",
+          fetchedData?.translations.find((t) => t.locale === "tr")
             ?.description || ""
         );
         setValue(
@@ -88,7 +88,7 @@ const ProductdetailsUpdate = ({ id }) => {
 
   const languages = [
     { code: "ar", name: "Arabic" },
-    { code: "kr", name: "Kurdish" },
+    { code: "kr", name: "Turkish" },
     { code: "en", name: "English" },
   ];
 
@@ -105,7 +105,7 @@ const ProductdetailsUpdate = ({ id }) => {
         ?.description,
     },
     {
-      head: t("kurdish description"),
+      head: t("Turkish description"),
       type: "text",
       placeholder: t("kr.description"),
       name: "kr.description",

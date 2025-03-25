@@ -40,7 +40,7 @@ const Product_attributes_valuesIndex = () => {
   const columns = useMemo(() => {
     return [
       t("value arabic"),
-      // t("value kurdish"),
+      t("value Turkish"),
       t("value english"),
       t("operations"),
     ];
@@ -68,13 +68,13 @@ const Product_attributes_valuesIndex = () => {
           hover
         >
           <TableCell sx={{ minWidth: 50 }}>
-            {product_attributes_values?.translations[0]?.value ?? "Null"}
+          {product_attributes_values?.translations?.find((t) => t.locale === "ar")?.value }
           </TableCell>
-          {/* <TableCell sx={{ minWidth: 50 }}>
-            {product_attributes_values?.translations[1]?.value ?? "Null"}
-          </TableCell> */}
           <TableCell sx={{ minWidth: 50 }}>
-            {product_attributes_values?.translations[1]?.value ?? "Null"}
+          {product_attributes_values?.translations?.find((t) => t.locale === "tr")?.value }
+          </TableCell>
+          <TableCell sx={{ minWidth: 50 }}>
+            {product_attributes_values?.translations?.find((t) => t.locale === "en")?.value }
           </TableCell>
           {/* <TableCell sx={{ minWidth: 120 }} align="center">
             <ChangeStatus

@@ -41,10 +41,10 @@ let schema = yup.object().shape({
   //   .string()
   //   .required("Purchasable is required")
   //   .oneOf(["always", "false"]),
-  // kr: yup.object().shape({
-  //   name: yup.string().required("Kurdish name name is required"),
-  //   description: yup.string().required("Kurdish description is required"),
-  // }),
+  tr: yup.object().shape({
+    name: yup.string().required("Turkish name name is required"),
+    description: yup.string().required("Turkish description is required"),
+  }),
   ar: yup.object().shape({
     name: yup.string().required("Arabic name name is required"),
     description: yup.string().required("Arabic description is required"),
@@ -92,16 +92,16 @@ const ProductUpdate = ({ id }) => {
         // setChecked(res.data?.data?.purchasable === "always" ? true : false);
         // setValue("purchasable", res.data?.data?.purchasable || false);
         if (fetchedData.translations) {
-          // setValue(
-          //   "kr.name",
-          //   fetchedData?.translations?.find((t) => t.locale === "kr")?.name ||
-          //     ""
-          // );
-          // setValue(
-          //   "kr.description",
-          //   fetchedData?.translations?.find((t) => t.locale === "kr")
-          //     ?.description || ""
-          // );
+          setValue(
+            "tr.name",
+            fetchedData?.translations?.find((t) => t.locale === "tr")?.name ||
+              ""
+          );
+          setValue(
+            "tr.description",
+            fetchedData?.translations?.find((t) => t.locale === "tr")
+              ?.description || ""
+          );
           setValue(
             "ar.name",
             fetchedData?.translations?.find((t) => t.locale === "ar")?.name ||
@@ -128,7 +128,7 @@ const ProductUpdate = ({ id }) => {
 
   const languages = [
     { code: "ar", name: "Arabic" },
-    // { code: "kr", name: "Kurdish" },
+    { code: "tr", name: "Turkish" },
     { code: "en", name: "English" },
   ];
 

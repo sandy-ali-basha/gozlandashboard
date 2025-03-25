@@ -83,6 +83,10 @@ const ProductView = () => {
       head: t("name arabic"),
       value: data?.translations?.find((t) => t.locale === "ar")?.name,
     },
+    {
+      head: t("name Turkish"),
+      value: data?.translations?.find((t) => t.locale === "tr")?.name,
+    },
     { head: t("status"), value: data?.status },
     { head: t("sku"), value: data?.sku },
     { head: t("price"), value: data?.price },
@@ -101,7 +105,10 @@ const ProductView = () => {
       head: t("description arabic"),
       value: data?.translations?.find((t) => t.locale === "ar")?.description,
     },
-   
+    {
+      head: t("description Turkish "),
+      value: data?.translations?.find((t) => t.locale === "tr")?.description,
+    },
   ];
 
   const handleUpdateImage = (updateLink, status) => {
@@ -183,6 +190,7 @@ const ProductView = () => {
                     <Box key={id} mt={3}>
                       <Typography
                         variant="p"
+                        color="text.main"
                         sx={{
                           fontWeight: "700",
                           marginInlineEnd: "15px",
@@ -191,6 +199,7 @@ const ProductView = () => {
                         {item.head}:
                       </Typography>
                       <Typography
+                        color="text.main"
                         variant="p"
                         dangerouslySetInnerHTML={{ __html: item?.value }}
                       ></Typography>
@@ -210,14 +219,14 @@ const ProductView = () => {
       />{" "}
       <DeleteImage open={openDelete} setOpen={setOpenDelete} link={link} />
       <BoxStyled sx={{ my: 2, p: 4 }}>
-        <Typography variant="body1" color="initial">
+        <Typography variant="body1" >
           product images{" "}
           <IconButton
             onClick={() =>
               handleUpdateImage(`/product/image/${data?.id}`, "add")
             }
           >
-            <AddAPhoto sx={{ color: "text.primary" }} />
+            <AddAPhoto sx={{ color: "text.main" }} />
           </IconButton>
         </Typography>
         <Grid container md={12}>
@@ -247,7 +256,7 @@ const ProductView = () => {
                     )
                   }
                 >
-                  <ModeTwoTone sx={{ color: "text.primary" }} />
+                  <ModeTwoTone sx={{ color: "text.main" }} />
                 </IconButton>
                 <IconButton
                   onClick={() =>
@@ -256,13 +265,13 @@ const ProductView = () => {
                     )
                   }
                 >
-                  <Delete sx={{ color: "text.primary" }} />
+                  <Delete sx={{ color: "text.main" }} />
                 </IconButton>
               </Box>
               <img
                 style={{
                   width: "100%",
-                  minHeight:"20vh",
+                  minHeight: "20vh",
                   objectFit: "contain",
                 }}
                 key={idx}
@@ -274,14 +283,14 @@ const ProductView = () => {
         </Grid>
       </BoxStyled>
       <BoxStyled sx={{ my: 2, p: 4 }}>
-        <Typography variant="body1" color="initial">
+        <Typography variant="body1" >
           product slider{" "}
           <IconButton
             onClick={() =>
               handleUpdateImage(`/product/slider/${data?.id}`, "add")
             }
           >
-            <AddAPhoto sx={{ color: "text.primary" }} />
+            <AddAPhoto sx={{ color: "text.main" }} />
           </IconButton>
         </Typography>
         <Grid container sx={{ display: "flex" }}>
@@ -311,7 +320,7 @@ const ProductView = () => {
                     )
                   }
                 >
-                  <ModeTwoTone sx={{ color: "text.primary" }} />
+                  <ModeTwoTone sx={{ color: "text.main" }} />
                 </IconButton>
                 <IconButton
                   onClick={() =>
@@ -320,13 +329,13 @@ const ProductView = () => {
                     )
                   }
                 >
-                  <Delete sx={{ color: "text.primary" }} />
+                  <Delete sx={{ color: "text.main" }} />
                 </IconButton>
               </Box>
               <img
                 style={{
                   width: "100%",
-                  minHeight:"20vh",
+                  minHeight: "20vh",
                   objectFit: "contain",
                 }}
                 key={idx}
@@ -338,14 +347,14 @@ const ProductView = () => {
         </Grid>
       </BoxStyled>
       {/* <BoxStyled sx={{ my: 2, p: 4 }}>
-        <Typography variant="body1" color="initial">
+        <Typography variant="body1" >
           product features{" "}
           <IconButton
             onClick={() =>
               handleUpdateImage(`/products/${data?.id}/images/products_features`, "add")
             }
           >
-            <AddAPhoto sx={{ color: "text.primary" }} />
+            <AddAPhoto sx={{ color: "text.main" }} />
           </IconButton>
         </Typography>
         <Grid container sx={{ display: "flex" }}>
@@ -375,7 +384,7 @@ const ProductView = () => {
                     )
                   }
                 >
-                  <ModeTwoTone sx={{ color: "text.primary" }} />
+                  <ModeTwoTone sx={{ color: "text.main" }} />
                 </IconButton>
                 <IconButton
                   onClick={() =>
@@ -384,7 +393,7 @@ const ProductView = () => {
                     )
                   }
                 >
-                  <Delete sx={{ color: "text.primary" }} />
+                  <Delete sx={{ color: "text.main" }} />
                 </IconButton>
               </Box>
               <img

@@ -16,9 +16,9 @@ import { _Product_attributes } from "api/product_attributes/product_attributes";
 import Loader from "components/shared/Loader";
 import ButtonLoader from "components/shared/ButtonLoader";
 const schema = yup.object().shape({
-  // kr: yup.object().shape({
-  //   title: yup.string().required("Kurdish title is required"),
-  // }),
+  tr: yup.object().shape({
+    title: yup.string().required("Turkish title is required"),
+  }),
   ar: yup.object().shape({
     title: yup.string().required("Arabic title is required"),
   }),
@@ -57,7 +57,7 @@ const Product_attributesUpdate = ({ id }) => {
 
   const languages = [
     { code: "ar", name: "Arabic" },
-    // { code: "kr", name: "Kurdish" },
+    { code: "tr", name: "Turkish" },
     { code: "en", name: "English" },
   ];
 

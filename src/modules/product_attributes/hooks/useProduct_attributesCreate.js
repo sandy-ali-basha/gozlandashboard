@@ -8,9 +8,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { _Product_attributes } from "api/product_attributes/product_attributes";
 
 const schema = yup.object().shape({
-  // kr: yup.object().shape({
-  //   title: yup.string().required("Kurdish title is required"),
-  // }),
+  tr: yup.object().shape({
+    title: yup.string().required("Turkish title is required"),
+  }),
   ar: yup.object().shape({
     title: yup.string().required("Arabic title is required"),
   }),
@@ -60,7 +60,7 @@ export const useProduct_attributesCreate = () => {
   const languages = [
     { code: "ar", title: "Arabic" },
     { code: "en", title: "English" },
-    // { code: "kr", title: "Kurdish" },
+    { code: "tr", title: "Turkish" },
   ];
 
   const details = languages.map((lang, index) => ({

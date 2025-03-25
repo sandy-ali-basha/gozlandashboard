@@ -290,8 +290,15 @@ const ProductIndex = () => {
         >
           <DataGrid
             sx={{
-              backgroundColor: "background.paper",
-              borderRadius: 3,
+              "&.MuiDataGrid-root": {
+                backgroundColor: "card.main", // Match body background
+                color: "text.main",
+                border: "none",
+                "--DataGrid-containerBackground": "card.main",
+                "--DataGrid-pinnedBackground": "card.main",
+                "--unstable_DataGrid-overlayBackground": "card.main",
+                minWidth: "800px",
+              },
             }}
             rows={rows}
             columns={gridColumns}

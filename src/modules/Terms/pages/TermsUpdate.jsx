@@ -25,10 +25,10 @@ const TermsUpdate = () => {
   const { t } = useTranslation("index");
 
   let schema = yup.object().shape({
-    // kr: yup.object().shape({
-    //   name: yup.string().required("Kurdish name is required"),
-    //   text: yup.string().required("Kurdish name is required"),
-    // }),
+    tr: yup.object().shape({
+      name: yup.string().required("Turkish name is required"),
+      text: yup.string().required("Turkish name is required"),
+    }),
     ar: yup.object().shape({
       name: yup.string().required("Arabic name is required"),
       text: yup.string().required("Arabic Text is required"),
@@ -63,14 +63,14 @@ const TermsUpdate = () => {
         const fetchedData = res.data?.data;
         setData(fetchedData);
         if (fetchedData) {
-          // setValue(
-          //   "kr.name",
-          //   fetchedData?.translations.find((t) => t.locale === "kr")?.name || ""
-          // );
-          // setValue(
-          //   "kr.text",
-          //   fetchedData?.translations.find((t) => t.locale === "kr")?.text || ""
-          // );
+          setValue(
+            "tr.name",
+            fetchedData?.translations.find((t) => t.locale === "tr")?.name || ""
+          );
+          setValue(
+            "tr.text",
+            fetchedData?.translations.find((t) => t.locale === "tr")?.text || ""
+          );
 
           setValue(
             "ar.name",
@@ -130,7 +130,7 @@ const TermsUpdate = () => {
           <>
             <Grid container component="form">
               <Grid item md={12} sx={{ p: "10px" }}>
-                <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" color="text.secondary">
+                <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" >
                   name arabic
                 </Typography>
                 <TextFieldStyled
@@ -144,7 +144,7 @@ const TermsUpdate = () => {
               </Grid>
               <Grid item xs={12} sx={{ p: "10px" }}>
                 <Box sx={{ margin: "0 0 8px 5px" }}>
-                  <Typography variant="body1" color="text.secondary" sx={{ color: "text.main" }}>
+                  <Typography variant="body1"  sx={{ color: "text.main" }}>
                     text arabic
                   </Typography>
                 </Box>
@@ -160,39 +160,39 @@ const TermsUpdate = () => {
                   }
                 />
               </Grid>
-              {/* <Grid item md={12} sx={{ p: "10px" }}>
-                <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" color="text.secondary">
-                  Name Kurdish
+              <Grid item md={12} sx={{ p: "10px" }}>
+                <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" >
+                  Name Turkish
                 </Typography>
                 <TextFieldStyled
                   sx={{ width: "100%" }}
                   type={"text"}
                   placeholder="name"
-                  {...register(`kr.name`)}
-                  error={!!errors.kr?.name}
-                  helperText={errors.kr?.name?.message || ""}
+                  {...register(`tr.name`)}
+                  error={!!errors.tr?.name}
+                  helperText={errors.tr?.name?.message || ""}
                 />
-              </Grid> */}
-              {/* <Grid item xs={12} sx={{ p: "10px" }}>
+              </Grid>
+              <Grid item xs={12} sx={{ p: "10px" }}>
                 <Box sx={{ margin: "0 0 8px 5px" }}>
-                  <Typography variant="body1" color="text.secondary" sx={{ color: "text.main" }}>
-                    text kurdish
+                  <Typography variant="body1"  sx={{ color: "text.main" }}>
+                    text Turkish
                   </Typography>
                 </Box>
                 <EditorInput
                   control={control}
                   register={register}
-                  name={"kr.text"}
+                  name={"tr.text"}
                   setValue={setValue}
-                  errors={errors?.kr?.text?.message}
+                  errors={errors?.tr?.text?.message}
                   initialValue={
-                    data?.translations.find((t) => t.locale === "kr")?.text ||
+                    data?.translations.find((t) => t.locale === "tr")?.text ||
                     ""
                   }
                 />
-              </Grid> */}
+              </Grid>
               <Grid item md={12} sx={{ p: "10px" }}>
-                <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" color="text.secondary">
+                <Typography sx={{ margin: "0 0 8px 8px" }} variant="body1" >
                   Name English
                 </Typography>
                 <TextFieldStyled
@@ -206,7 +206,7 @@ const TermsUpdate = () => {
               </Grid>
               <Grid item xs={12} sx={{ p: "10px" }}>
                 <Box sx={{ margin: "0 0 8px 5px" }}>
-                  <Typography variant="body1" color="text.secondary" sx={{ color: "text.main" }}>
+                  <Typography variant="body1"  sx={{ color: "text.main" }}>
                     {t("text English")}
                   </Typography>
                 </Box>

@@ -18,7 +18,7 @@ import Loader from "components/shared/Loader";
 import ButtonLoader from "components/shared/ButtonLoader";
 const schema = yup.object().shape({
   kr: yup.object().shape({
-    name: yup.string().required("Kurdish name is required"),
+    name: yup.string().required("Turkish name is required"),
   }),
   ar: yup.object().shape({
     name: yup.string().required("Arabic name is required"),
@@ -50,7 +50,7 @@ const DiscountsUpdate = ({ id }) => {
   }, [id,editedID]);
   const languages = [
   { code: "ar", name: "Arabic" },
-    { code: "kr", name: "Kurdish" },
+    { code: "kr", name: "Turkish" },
     { code: "en", name: "English" },
   ];
 

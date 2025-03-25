@@ -25,7 +25,7 @@ const TextEditor = ({ editorContent, setEditorContent }) => {
           padding: "10px",
           margin: "10px",
           width: "100%",
-          color: "text.primary",
+          color: "text.main",
         }}
       >
         <ReactQuill

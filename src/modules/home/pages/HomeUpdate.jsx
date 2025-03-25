@@ -72,6 +72,20 @@ const HomeUpdate = ({ id, type }) => {
       register: "description_ar",
       defaultValue: data?.description_ar,
     },
+    {
+      head: t("title turkish"),
+      type: "text",
+      placeholder: t("title turkish"),
+      register: "title_tr",
+      defaultValue: data?.title_tr,
+    },
+    {
+      head: t("description turkish"),
+      type: "text",
+      placeholder: t("description turkish"),
+      register: "description_tr",
+      defaultValue: data?.description_tr,
+    },
   ];
 
   const handleClose = () => {
@@ -107,6 +121,8 @@ const HomeUpdate = ({ id, type }) => {
     formData.append("description", input.description);
     formData.append("title_ar", input.title_ar);
     formData.append("description_ar", input.description_ar);
+    formData.append("title_tr", input.title_tr);
+    formData.append("description_tr", input.description_tr);
     mutate(formData);
     setLoading(true);
   };
@@ -154,7 +170,7 @@ const HomeUpdate = ({ id, type }) => {
                 }}
               >
                 <img src={data?.image} alt="item" style={{ width: "20vw" }} />
-                <Typography variant="body1" color="initial" sx={{ mt: 2 }}>
+                <Typography variant="body1"   sx={{ mt: 2 }}>
                   replace current image
                 </Typography>
                 <Image

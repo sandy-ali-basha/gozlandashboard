@@ -14,7 +14,7 @@ const ProductFeatures = ({ id }) => {
         pointerEvents: id.length > 0 ? "initial" : "none",
       }}
     >
-      <Typography variant="body1" color="initial">
+      <Typography variant="body1"  >
         product features{" "}
       </Typography>
       <EditImage

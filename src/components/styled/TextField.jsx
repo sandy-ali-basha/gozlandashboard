@@ -10,7 +10,7 @@ export const TextFieldStyled = styled(TextField)(({ theme }) => ({
     position: "relative",
     marginBottom: theme.spacing(1),
     fontSize: theme.typography.body2.fontSize,
-    color: `${theme.palette.text.primary} !important`,
+    color: `${theme.palette.text.main} !important`,
   },
   "& .MuiInputBase-root": {
     width: "100%",

@@ -1,4 +1,3 @@
-
 const colors = {
   background: {
     main: "#444545",
@@ -27,83 +26,83 @@ const colors = {
     main: "#A7B4B3",
   },
   primary: {
-    light: '#2EC4B6',
-    dark: '#FF9F1C',
-    main: '#D36135',
-    contrastText: '#fff'
+    light: "#2EC4B6",
+    dark: "#FF9F1C",
+    main: "#D36135",
+    contrastText: "#fff",
   },
   secondary: {
-    light: '#CBF3F0',
-    main: '#A8AAAE',
-    dark: '#949699',
-    contrastText: '#fff'
+    light: "#CBF3F0",
+    main: "#A8AAAE",
+    dark: "#949699",
+    contrastText: "#fff",
   },
   error: {
-    light: '#ED6F70',
-    main: '#EA5455',
-    dark: '#CE4A4B',
-    contrastText: '#fff'
+    light: "#ED6F70",
+    main: "#EA5455",
+    dark: "#CE4A4B",
+    contrastText: "#fff",
   },
   warning: {
-    light: '#FFAB5A',
-    main: '#FF9F43',
-    dark: '#E08C3B',
-    contrastText: '#fff'
+    light: "#FFAB5A",
+    main: "#FF9F43",
+    dark: "#E08C3B",
+    contrastText: "#fff",
   },
   info: {
-    light: '#1FD5EB',
-    main: '#00CFE8',
-    dark: '#00B6CC',
-    contrastText: '#fff'
+    light: "#1FD5EB",
+    main: "#00CFE8",
+    dark: "#00B6CC",
+    contrastText: "#fff",
   },
   success: {
-    light: '#42CE80',
-    main: '#28C76F',
-    dark: '#23AF62',
-    contrastText: '#fff'
+    light: "#42CE80",
+    main: "#28C76F",
+    dark: "#23AF62",
+    contrastText: "#fff",
   },
   card: {
     main: "#323434",
   },
   grey: {
-    50: '#FAFAFA',
-    100: '#F5F5F5',
-    200: '#EEEEEE',
-    300: '#E0E0E0',
-    400: '#BDBDBD',
-    500: '#9E9E9E',
-    600: '#757575',
-    700: '#616161',
-    800: '#424242',
-    900: '#212121',
-    A100: '#F5F5F5',
-    A200: '#EEEEEE',
-    A400: '#BDBDBD',
-    A700: '#616161'
+    50: "#FAFAFA",
+    100: "#F5F5F5",
+    200: "#EEEEEE",
+    300: "#E0E0E0",
+    400: "#BDBDBD",
+    500: "#9E9E9E",
+    600: "#757575",
+    700: "#616161",
+    800: "#424242",
+    900: "#212121",
+    A100: "#F5F5F5",
+    A200: "#EEEEEE",
+    A400: "#BDBDBD",
+    A700: "#616161",
   },
 };
 
 export const typography = {
   fontFamily: [
-    'Public Sans',
-    'sans-serif',
-    '-apple-system',
-    'BlinkMacSystemFont',
+    "Public Sans",
+    "sans-serif",
+    "-apple-system",
+    "BlinkMacSystemFont",
     '"Segoe UI"',
-    'Roboto',
+    "Roboto",
     '"Helvetica Neue"',
-    'Arial',
-    'sans-serif',
+    "Arial",
+    "sans-serif",
     '"Apple Color Emoji"',
     '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"'
-  ].join(','),
+    '"Segoe UI Symbol"',
+  ].join(","),
   fontSize: 13.125,
-  
+
   inputTitle: {
     color: colors.text.main,
   },
-}
+};
 
 export const darkThemeOptions = {
   components: {
@@ -188,6 +187,13 @@ export const darkThemeOptions = {
       styleOverrides: {
         root: {
           textAlign: "center",
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: colors.text.main, // Replace colors.text.main with an actual value
         },
       },
     },

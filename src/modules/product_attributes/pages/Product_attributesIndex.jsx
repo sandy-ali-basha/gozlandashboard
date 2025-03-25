@@ -37,7 +37,7 @@ const Product_attributesIndex = () => {
   const columns = useMemo(() => {
     return [
       t("title arabic"),
-      // t("title kurdish"),
+      t("title Turkish"),
       t("title english"),
       t("operations"),
     ];
@@ -62,13 +62,13 @@ const Product_attributesIndex = () => {
         {/* //todo add translation */}
 
         <TableCell sx={{ minWidth: 50 }}>
-          {product_attributes?.translations[0]?.title ?? "Null"}
+         {product_attributes?.translations?.find((t) => t.locale === "ar")?.title ?? "Null"}
         </TableCell>
-        {/* <TableCell sx={{ minWidth: 50 }}>
-          {product_attributes?.translations[1]?.title ?? "Null"}
-        </TableCell> */}
         <TableCell sx={{ minWidth: 50 }}>
-          {product_attributes?.translations[2]?.title ?? "Null"}
+         {product_attributes?.translations?.find((t) => t.locale === "tr")?.title ?? "Null"}
+        </TableCell>
+        <TableCell sx={{ minWidth: 50 }}>
+         {product_attributes?.translations?.find((t) => t.locale === "en")?.title ?? "Null"}
         </TableCell>
         {/* <TableCell sx={{ minWidth: 120 }} align="center">
           <ChangeStatus

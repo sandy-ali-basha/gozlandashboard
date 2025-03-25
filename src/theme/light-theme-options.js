@@ -91,7 +91,7 @@ export const lightThemeOptions = {
           },
           style: {
             backgroundColor: colors.secondary.main,
-            color: colors.text.main ,
+            color: colors.text.main,
             boxShadow: 3,
             "&:hover": {
               backgroundColor: colors.background.hover,
@@ -113,7 +113,13 @@ export const lightThemeOptions = {
         },
       ],
     },
-
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: colors.text.main, // Replace colors.text.main with an actual value
+        },
+      },
+    },
     MuiTableHead: {
       styleOverrides: {
         root: {

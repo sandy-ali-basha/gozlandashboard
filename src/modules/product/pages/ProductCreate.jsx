@@ -14,7 +14,7 @@ const ProductCreate = () => {
     <Grid container spacing={3}>
       <Grid item xs="12">
         <CreateProductDetails setNewProductId={setNewProductId} />
-        {/* <Typography variant="body1" sx={{ color: "text.primary", mt: 5 }}>
+        {/* <Typography variant="body1" sx={{ color: "text.main", mt: 5 }}>
           Add Details For the New Created Products
           {newProductId.length > 0 &&
             newProductId?.map((item, idx) => (
